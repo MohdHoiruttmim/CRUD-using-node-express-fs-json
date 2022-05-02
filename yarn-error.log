@@ -1,0 +1,31 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\ACER\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Users\ACER\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ACER\bin;C:\Program Files\Microsoft\jdk-17.0.2.8-hotspot\bin;C:\Windows\System3;.;C:\WINDOWS\system3;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\Users\ACER\Downloads\CPPCompilator\bin;C:\Users\ACER\AppData\Roaming\Python\Python37\Scripts;C:\Users\ACER\Downloads\chromedriver_win32\chromedriver.exe;C:\Program Files\Git\cmd;C:\Users\ACER\Documents\Flutter\flutter\bin;C:\Program Files\Inkscape\bin;C:\WINDOWS\system32";C:\Users\ACER\AppData\Local\Programs\Python\Python39;C:\Program Files\nodejs;C:\Program Files\MongoDB\Server\5.0\bin;C:\Users\ACER\AppData\Local\Programs\Python\Python39\Scripts;C:\Users\ACER\AppData\Local\Programs\Python\Python39;C:\Windows\System3;.;C:\Users\ACER\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\ACER\AppData\Local\Programs\Python\Python37;C:\Users\ACER\AppData\Local\Microsoft\WindowsApps;C:\Users\ACER\Downloads\CPPCompilator\bin;E:\PyCharm Community Edition 2020.2.2\bin;C:\Users\ACER\Documents\Flutter\flutter\bin;C:\Users\ACER\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Users\ACER\AppData\Roaming\npm;C:\Program Files\MongoDB\Server\5.0\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: Can't answer a question unless a user TTY
+      at ConsoleReporter.question (C:\Users\ACER\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:96935:59)
+      at Object.<anonymous> (C:\Users\ACER\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:89125:38)
+      at Generator.next (<anonymous>)
+      at step (C:\Users\ACER\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\ACER\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
