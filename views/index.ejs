@@ -27,33 +27,16 @@
                 <input class="form-control" name="task" placeholder="insert task"></input>
                 <input type="submit" value="Add" class="btn btn-primary mx-2">
             </form>
-            <div class="list-task">
+            <div class="list-task my-5">
+              <% const task = data %> 
+              <% task.forEach(element => { %>
                 <ul class="list-group">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                      A list item
-                      <span class="badge bg-primary rounded-pill">14</span>
+                      <%= element.task  %>
+                      <a href="/del/:<%= element.id %> " class="btn btn-danger">Delete</a href="/del">
                     </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                      A second list item
-                      <span class="badge bg-primary rounded-pill">2</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                      A third list item
-                      <span class="badge bg-primary rounded-pill">1</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                      A third list item
-                      <span class="badge bg-primary rounded-pill">1</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                      A third list item
-                      <span class="badge bg-primary rounded-pill">1</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                      A third list item
-                      <span class="badge bg-primary rounded-pill">1</span>
-                    </li>
-                  </ul>
+                </ul>
+              <% }) %>
             </div>
         </div>
     </div>
