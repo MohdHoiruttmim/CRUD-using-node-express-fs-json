@@ -3,6 +3,7 @@ const app = express()
 const bodyParser = require("body-parser");
 const file = require("fs");
 const data = require("./json/test.json");
+const swal = require("sweetalert2");
 const time = new Date();
 
 //use internal css
@@ -19,6 +20,15 @@ app.get('/', (req, res) => {
     res.render('index.ejs', { data })
 })
 
+// Function to save task to json file
+const saveTask = () => {
+    file.writeFile("./json/test.json", JSON.stringify(data), (err) => {
+        if (err)
+            throw err;
+        console.log("Data written to file");
+    });
+}
+
 // Create a new task
 app.post('/send', (req, res, next) => {
     acc = {
@@ -28,11 +38,8 @@ app.post('/send', (req, res, next) => {
     next()
 }, (req, res) => {
         data.push(acc);
-        file.writeFile("./json/test.json", JSON.stringify(data), (err) => {
-            if (err) throw err;
-            console.log("Data written to file");
-        });
-    res.redirect('/')
+        saveTask();
+        res.redirect('/')
 })
 
 // Delete a task
@@ -42,12 +49,21 @@ app.get('/del/:id', (req, res) => {
             data.splice(index, 1);
         }
     })
-    file.writeFile("./json/test.json", JSON.stringify(data), (err) => {
-        if (err) throw err;
-        console.log("Data written to file");
-    });
+    saveTask();
     res.redirect('/')
 })
+
+// Update a task
+app.post('/update/:id', (req, res) => {
+    data.forEach((item, index) => {
+        if (item.id == req.params.id) {
+            data[index].task = req.body.task;
+        }
+    })
+    saveTask();
+    res.redirect('/')
+})
+
 
 app.get('/api-test', (req, res) => {
     res.sendFile(__dirname + '/json/test.json')

@@ -8,6 +8,7 @@
     "ejs": "^3.1.7",
     "express": "^4.17.3",
     "fs": "^0.0.1-security",
+    "sweetalert2": "^11.4.10",
     "yarn": "^1.22.18"
   },
   "scripts": {
