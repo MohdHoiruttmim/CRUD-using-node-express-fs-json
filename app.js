@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
     res.render('index.ejs', { data })
 })
 
+// Create a new task
 app.post('/send', (req, res, next) => {
     acc = {
         id : time.getTime(),
@@ -31,6 +32,20 @@ app.post('/send', (req, res, next) => {
             if (err) throw err;
             console.log("Data written to file");
         });
+    res.redirect('/')
+})
+
+// Delete a task
+app.get('/del/:id', (req, res) => {
+    data.forEach((item, index) => {
+        if (item.id == req.params.id) {
+            data.splice(index, 1);
+        }
+    })
+    file.writeFile("./json/test.json", JSON.stringify(data), (err) => {
+        if (err) throw err;
+        console.log("Data written to file");
+    });
     res.redirect('/')
 })
 
