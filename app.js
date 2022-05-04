@@ -2,7 +2,7 @@ const express = require("express");
 const app = express()
 const bodyParser = require("body-parser");
 const file = require("fs");
-const data = require("./json/test.json");
+const data = require("./json/db.json");
 const swal = require("sweetalert2");
 const time = new Date();
 
@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 // Function to save task to json file
 const saveTask = () => {
-    file.writeFile("./json/test.json", JSON.stringify(data), (err) => {
+    file.writeFile("./json/db.json", JSON.stringify(data), (err) => {
         if (err)
             throw err;
         console.log("Data written to file");
@@ -65,7 +65,7 @@ app.post('/update/:id', (req, res) => {
 })
 
 app.get('/api-test', (req, res) => {
-    res.sendFile(__dirname + '/json/test.json')
+    res.sendFile(__dirname + '/json/db.json')
 })
 
 app.listen(process.env.PORT || 3000, () => {
