@@ -16,7 +16,7 @@
 
           <!-- Create new task input -->
             <form action="create" method="post" class="d-flex col-lg-6 mx-auto">
-                <input class="form-control" name="task" placeholder="insert task"></input>
+                <input class="form-control" name="task" placeholder="insert task" required></input>
                 <input type="submit" value="Add" class="btn btn-primary mx-2">
             </form>
 
@@ -46,7 +46,7 @@
                               </div>
                               <div class="modal-body">
                                 <form action="/update/<%= listTask[index].id %> " method="post">
-                                  <input class="form-control" name="text" value="<%= listTask[index].task %> ">
+                                  <input class="form-control" name="text" value="<%= listTask[index].task %> " required>
                                   <input type="submit" value="Save" class="btn btn-primary mt-3">
                                 </form>
                               </div>

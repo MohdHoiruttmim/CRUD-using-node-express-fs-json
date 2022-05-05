@@ -3,7 +3,6 @@ const app = express()
 const bodyParser = require("body-parser");
 const file = require("fs");
 const data = require("./json/db.json");
-const swal = require("sweetalert2");
 const time = new Date();
 
 //use internal css
