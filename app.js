@@ -3,6 +3,7 @@ const app = express()
 const bodyParser = require("body-parser");
 const file = require("fs");
 const data = require("./json/db.json");
+const taskRoute = require("./routes/taskRoute.js");
 const time = new Date();
 
 //use internal css
@@ -11,6 +12,7 @@ app.use(express.static("views"));
 //using body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(taskRoute.route)
 
 //view engine ejs
 app.set("view engine", "ejs");
