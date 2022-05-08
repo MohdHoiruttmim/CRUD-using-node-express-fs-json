@@ -5,7 +5,7 @@ const saveTask = () => {
     file.writeFile("./json/db.json", JSON.stringify(task), (err) => {
         if (err)
             throw err;
-        console.log("Data has been deleted");
+        console.log("Data has been modified");
     });
 }
 
@@ -24,5 +24,14 @@ const deleteTask = async (req, res) => {
     res.status(200).json(deletedTask);
 }
 
-module.exports = { getTask, deleteTask };
+const addTask = async (req, res) => {
+    const time = new Date();
+    newTask = req.body
+    newTask.id = time.getTime() + Math.floor(Math.random() * 100);
+    task.push(newTask);
+    saveTask();
+    res.status(200).json(req.body);
+}
+
+module.exports = { getTask, deleteTask, addTask };
 
