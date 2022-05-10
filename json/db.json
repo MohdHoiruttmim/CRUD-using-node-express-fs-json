@@ -1,6 +1,9 @@
 [
-  { "id": 1651669983217, "task": "asyikkk bisa nih ini juga bisa kak " },
-  { "id": 1651938769898, "task": "saya akan membuat ini menjadi restfull api" },
+  {
+    "task": "ini bisa di edit juga kak pake json kak, tapi pas idnya jadi di belakang",
+    "id": 1651669983217
+  },
+  { "task": "yowes gaopo lah seng penting isok rest api", "id": 1651938769898 },
   {
     "id": 1652024075393,
     "task": "bisa juga ternyata pake app get dalam menghapus item "

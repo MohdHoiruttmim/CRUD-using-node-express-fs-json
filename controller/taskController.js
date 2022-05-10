@@ -30,8 +30,20 @@ const addTask = async (req, res) => {
     newTask.id = time.getTime() + Math.floor(Math.random() * 100);
     task.push(newTask);
     saveTask();
-    res.status(200).json(req.body);
+    res.status(200).json(newTask);
 }
 
-module.exports = { getTask, deleteTask, addTask };
+const updateTask = async (req, res) => {
+    task.forEach((item, index) => {
+        if (item.id == req.params.id) {
+            task[index] = req.body;
+            task[index].id = parseInt(req.params.id);
+            updated = task[index];
+        }
+    })
+    saveTask();
+    res.status(201).json(updated);
+}
+
+module.exports = { getTask, deleteTask, addTask, updateTask };
 
